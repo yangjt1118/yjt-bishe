@@ -5,7 +5,7 @@
     <h1>银行资讯列表</h1>
     <el-row>
       <el-col :span="6">
-        <el-select v-model="value" placeholder="请输入要查询的文章标签">
+        <el-select v-model="value" placeholder="输入查询的文章标签">
           <el-option
             v-for="item in options"
             :key="item.value"
@@ -70,7 +70,7 @@ export default {
   },
   mounted() {
     this.fench();
-    this.drawLine1();
+    // this.drawLine1();
     this.$http.get("admin/querytag")
       .then(res=>{
           if(res.data.code==200){
