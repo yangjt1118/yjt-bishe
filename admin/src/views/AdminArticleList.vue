@@ -13,7 +13,7 @@
             :value="item.value"
           ></el-option>
         </el-select>
-        <el-button type="primary" @click="search">查询</el-button>
+        <el-button type="primary" @click="search">点击查询</el-button>
       </el-col>
       <el-col :span="6"></el-col>
       <el-col :span="6"></el-col>
