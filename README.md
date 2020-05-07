@@ -1,5 +1,5 @@
 # yjt-bishe
-大学毕设 简单
+大学毕设
 ### **服务器运行**
 
 首先安装python3.8，选择安装路径，然后配置python环境，在环境变量的系统变量中的path中添加python路径 python下的Script路径。
