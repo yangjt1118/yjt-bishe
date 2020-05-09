@@ -4,7 +4,7 @@
       <div class="text item">
         <div>姓名：{{ user.name }}</div>
         <el-divider></el-divider>
-        <div>电话号码：{{user.phone}}</div>
+        <div>手机号码:{{user.phone}}</div>
         <el-divider></el-divider>
         <div>籍贯:{{user.address}}</div>
         <el-divider></el-divider>
