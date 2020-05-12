@@ -1,17 +1,19 @@
 <template>
   <div>
     <van-row style="margin-top:0px">
-      <van-col span="24" offset="" style="text-align:center">
-        <van-uploader :after-read="afterRead" style="color:teal">
+        <van-col span="24" offset="" style="text-align:center;height:200px">
+        <van-uploader :after-read="afterRead">
           <img class="tximg" :src="touxiang" alt="图片跑掉惹。。。" v-if="txshow==true" />
           <img class="tximg" src="../assets/mrtx1.jpg" alt="" v-else />
-
           <!-- <van-button icon="photo" plain hairline size="mini" >上传头像</van-button> -->
         </van-uploader>
       </van-col>
       <!-- <van-col span="8"></van-col> -->
     </van-row>
-    <van-cell-group>
+    <div class="background">
+      <img :src="touxiang" alt="">
+    </div>
+    <van-cell-group >
       <van-cell icon="user-o">{{ user.name }}</van-cell>
       <van-cell title="性别" icon="manager-o">{{ user.gender }}</van-cell>
       <van-cell title="电话" icon="phone-o">{{ user.phone }}</van-cell>
@@ -105,10 +107,24 @@ export default {
   }
 };
 </script>
-<style>
+<style lang="stylus" rel="stylesheet/stylus" scope>
 .tximg {
   border-radius: 50%;
   height: 100px;
   width: 100px;
+  margin-top: 50px
 }
+  .background {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    z-index: -1;
+    filter: blur(10px);
+    img {
+      width: 100%;
+      height: 100%;
+    }    
+  }
 </style>

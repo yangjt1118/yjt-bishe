@@ -2,9 +2,9 @@
   <div>
     <div class="gird">
       <van-grid :gutter="10" :column-num="3">
-        <van-grid-item icon="manager-o" text="我的账户" to="/querycard" />
-        <van-grid-item icon="credit-pay" text="新增银行卡" to="/addcard" />
-        <van-grid-item icon="refund-o" text="转账汇款" to="/transfer" />
+        <van-grid-item style="color: rgb(51, 70, 196)" icon="manager-o" text="我的账户" to="/querycard" />
+        <van-grid-item style="color: rgb(255, 12, 202)" icon="credit-pay" text="新增银行卡" to="/addcard" />
+        <van-grid-item style="color: rgb(35, 204, 16)" icon="refund-o" text="转账汇款" to="/transfer" />
         
         <!-- <van-grid-item icon="photo-o" text="文字" /> -->
       </van-grid>
@@ -13,9 +13,9 @@
     <div class="gird">
       <van-grid :gutter="10" :column-num="3">
         <!-- <van-grid-item icon="photo-o" text="文字" /> -->
-        <van-grid-item icon="label-o" text="转账记录" to="/transferhistory" />
-        <van-grid-item icon="orders-o" text="购买记录" to="/orderhistory" />
-        <van-grid-item icon="photo-o" text="更多功能" @click="futuer" />
+        <van-grid-item style="color: rgb(201, 224, 85)" icon="label-o" text="转账记录" to="/transferhistory" />
+        <van-grid-item style="color: rgb(229, 186, 87)" icon="orders-o" text="购买记录" to="/orderhistory" />
+        <van-grid-item style="color: rgb(219, 126, 247)" icon="photo-o" text="更多功能" @click="futuer" />
       </van-grid>
     </div>
     <van-swipe :autoplay="3000">
