@@ -11,7 +11,7 @@
     </van-sticky> -->
     <div class="center"><router-view></router-view></div>
 
-    <van-tabbar route style="background-color: #a4b5d8;">
+    <van-tabbar route style="">
       <van-tabbar-item replace to="/shouye" icon="home-o">
         首页
       </van-tabbar-item>

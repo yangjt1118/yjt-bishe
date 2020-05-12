@@ -41,11 +41,11 @@ export default {
       cardshow:false
     };
   },
-  mounted() {
+  created() {
     this.fench();
   },
   methods: {
-    fench() {
+    async fench() {
       this.user2 = JSON.parse(sessionStorage.getItem("user"));
       // console.log("user2",this.user2)
       if (this.user2 == null) {
@@ -53,16 +53,22 @@ export default {
       }
       this.user.name = this.user2.name;
       // console.log(this.user);
-      this.$http.post("user/querycard", this.user).then(res => {
-        if (res.data.code == 200) {
-          if(res.data.data.length==0){
-            this.cardshow=false
-          }else{
-            this.cardshow=true
-            this.list = res.data.data;
+      try {
+        const res = await this.$http.post("user/querycard", this.user)
+        console.log(res)
+          if (res.data.code == 200) {
+            if(res.data.data.length==0){
+              this.cardshow=false
+            }else{
+              this.cardshow=true
+              this.list = res.data.data;
+              console.log
+            }
           }
-        }
-      });
+      }catch(err){
+        console.log(err)
+      }
+
     },
  onClickLeft() {
         this.$router.push("/Shouye")
